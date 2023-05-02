@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Public+Sans:wght@300;400;500;600;700;800;900&display=swap');
+*{
+  font-family: 'Public Sans' !important;
+}
+
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+ 
+}
+
+.loading-spinner-inner {
+  display: inline-block;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  
+}
+
+.loading-spinner-inner:after {
+  content: " ";
+  display: block;
+  border-radius: 50%;
+  width: 0;
+  height: 0;
+  /* margin: 8px; */
+  box-sizing: border-box;
+  border: 12px solid #fff;
+  border-color: #fff transparent #fff transparent;
+  animation: loading-spinner 1.2s infinite;
+  margin-top: -2px;
+}
+
+@keyframes loading-spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
